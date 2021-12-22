@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/dist/tailwind.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="//db.onlinewebfonts.com/c/ba65c7020043d1d406686743e82e2e5d?family=Bebas+Neue" rel="stylesheet" type="text/css" /> -->
+    <title>Document</title>
+    <style>
+        .font-babes {
+            font-family: "Bebas Neue"
+        }
+        
+        .text-vertical {
+            writing-mode: tb-rl;
+            transform: rotate(-180deg);
+        }
+    </style>
+</head>
+
+<body class="p-8">
+    <div class="grid grid-cols-12 gap-0.5" x-data="{ tab: 'sustained' }">
+        <!-- Fuel Types -->
+        <div class=" col-span-3 grid grid-rows-5 font-babes gap-0.5 bg-black">
+            <div class="bg-white">
+            </div>
+            <div class="bg-green-500 text-gray-50 p-2 flex justify-center items-center text-center tracking-wide">
+                HYSDROGEN <br/> FUEL CELLS
+            </div>
+            <div class="bg-blue-400 p-2 flex justify-center items-center text-center text-gray-50 ">
+                LITHIUM-ION <br/> BATTERIES
+            </div>
+            <div class="bg-yellow-300 p-2 flex justify-center items-center text-center text-gray-100 tracking-wide">
+                LEAD ACID <br/> BATTERIS
+            </div>
+            <div class="bg-red-500 p-2 flex justify-center items-center text-center text-gray-50 tracking-wide">
+                INTERNAL <br/> COMBUSTION <br/> ENGINE
+            </div>
+        </div>
+        <!-- /Fuel Types -->
+        <!-- Emission Details -->
+        <div class="bg-blue-100 text-sm text-vertical flex justify-center items-center" :class="tab === 'emission' ? 'hidden' : 'flex'" x-on:click.prevent="tab = 'emission'">
+            EMISSION
+        </div>
+
+        <div class="col-span-4 gap-1 bg-black" x-show="tab === 'emission'" x-transition>
+            <div class="grid grid-rows-5 h-full bg-black gap-0.5">
+                <div class="flex justify-center items-center p-1 bg-gray-200 ">
+                    <h4 class="text-center font-babes text-md text-gray-800">EMISSION
+                    </h4>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="Emission-hy">
+                    <p class="text-xs text-center">No harmful emissions; only water vapor and heat</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="emission-li">
+                    <p class="text-xs text-center">No harmful emissions</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart2.svg" class="w-8 h-8" alt="emission-la">
+                    <p class="text-xs text-center">None while in operation, but does emit fumes that require ventilation during battery charging</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart3.svg" class="w-8 h-8" alt="emission-ice">
+                    <p class="text-xs text-center">Emissions while in operation. Well-suited for outdoor or highlyventilated environments
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /Emission Details -->
+
+        <!-- space-req Details -->
+        <div class="bg-blue-100 text-sm text-vertical  justify-center items-center" :class="tab === 'space-req' ? 'hidden' : 'flex'" x-on:click.prevent="tab = 'space-req'">
+            SPACE REQUIREMENTS
+        </div>
+        <div class="col-span-4 gap-1 bg-black" x-show="tab === 'space-req'" x-transition>
+            <div class="grid grid-rows-5 h-full bg-black gap-0.5">
+                <div class="flex justify-center items-center p-1 bg-gray-200 ">
+                    <h4 class="text-center font-babes text-md text-gray-800"> SPACE REQUIREMENTS
+                    </h4>
+                </div>
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="Emission-hy">
+                    <p class="text-xs text-center">Space-efficient infrastructure; storage can be located outside facility with dispensers located indoors or outdoors</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart2.svg" class="w-8 h-8" alt="emission-li">
+                    <p class="text-xs text-center">No specialized changing or maintenance rooms required
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart3.svg" class="w-8 h-8" alt="emission-la">
+                    <p class="text-xs text-center">Separate room, infrastructure often required for battery charging, changing and maintenance</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="emission-ice">
+                    <p class="text-xs text-center">Primary fueling and storage infrastructure located outside facility
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /space-req Details -->
+
+        <!-- maint Details -->
+        <div class="bg-blue-100 text-sm text-vertical flex justify-center items-center" :class="tab === 'maint' ? 'hidden' : 'flex'" x-on:click.prevent="tab = 'maint'">
+            MAINTENANCE </div>
+
+        <div class="col-span-4 gap-1 bg-black" x-show="tab === 'maint'" x-transition>
+            <div class="grid grid-rows-5 h-full bg-black gap-0.5">
+                <div class="flex justify-center items-center p-1 bg-gray-200 ">
+                    <h4 class="text-center font-babes text-md text-gray-800"> MAINTENANCE
+                    </h4>
+                </div>
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart4.svg" class="w-8 h-8" alt="Emission-hy">
+                    <p class="text-xs text-center">Moderate maintenance requirements
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="emission-li">
+                    <p class="text-xs text-center">No maintenance or equalization requirements
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart3.svg" class="w-8 h-8" alt="emission-la">
+                    <p class="text-xs text-center">Higher maintenance requirements compared to other electric options</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart2.svg" class="w-8 h-8" alt="emission-ice">
+                    <p class="text-xs text-center">Requires regular, but not daily, maintenance
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /maint Details -->
+
+        <!-- local Details -->
+        <div class="bg-blue-100 text-sm text-vertical flex justify-center items-center" :class="tab === 'local' ? 'hidden' : 'flex'" x-on:click.prevent="tab = 'local'">LOCAl UTILITY REQUIREMENT</div>
+
+        <div class="col-span-4 gap-1 bg-black" x-show="tab === 'local'" x-transition>
+            <div class="grid grid-rows-5 h-full bg-black gap-0.5">
+                <div class="flex justify-center items-center p-1 bg-gray-200 ">
+                    <h4 class="text-center font-babes text-md text-gray-800"> LOCAl UTILITY REQUIREMENT
+                    </h4>
+                </div>
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart2.svg" class="w-8 h-8" alt="Emission-hy">
+                    <p class="text-xs text-center">None, though refueling system may have requirements
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart2.svg" class="w-8 h-8" alt="emission-li">
+                    <p class="text-xs text-center">More intense electrical grid burden, depending on fleet size and charge intervals
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart2.svg" class="w-8 h-8" alt="emission-la">
+                    <p class="text-xs text-center">Moderate electrical requirements, depending on fleet size</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="emission-ice">
+                    <p class="text-xs text-center">None
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /local Details -->
+
+        <!-- required Details -->
+        <div class="bg-blue-100 text-sm text-vertical flex justify-center
+         items-center" :class="tab === 'required' ? 'hidden' : 'flex'" x-on:click.prevent="tab = 'required'">
+            REQUIRED OPERATOR ENVOLVEMENT</div>
+
+        <div class="col-span-4 gap-1 bg-black" x-show="tab === 'required'" x-transition>
+            <div class="grid grid-rows-5 h-full bg-black gap-0.5">
+                <div class="flex justify-center items-center p-1 bg-gray-200 ">
+                    <h4 class="text-center font-babes text-md text-gray-800"> REQUIRED OPERATOR ENVOLVEMENT
+                    </h4>
+                </div>
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="Emission-hy">
+                    <p class="text-xs text-center">Simple, fast refueling
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart2.svg" class="w-8 h-8" alt="emission-li">
+                    <p class="text-xs text-center">Designed for opportunity charging; faster recharge capability than lead acid
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart3.svg" class="w-8 h-8" alt="emission-la">
+                    <p class="text-xs text-center">Complex and time-consuming battery maintenance, charging or changing</p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="emission-ice">
+                    <p class="text-xs text-center">Simple, fast refueling with tank changes or pump
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /required Details -->
+
+        <!-- sustained Details -->
+        <div class="bg-blue-100 text-sm text-vertical flex justify-center
+         items-center" :class="tab === 'sustained' ? 'hidden' : 'flex'" x-on:click.prevent="tab = 'sustained'">SUSTAINED POWER DELIVERY
+        </div>
+
+        <div class="col-span-4 gap-1 bg-black" x-show="tab === 'sustained'" x-transition>
+            <div class="grid grid-rows-5 h-full bg-black gap-0.5">
+                <div class="flex justify-center items-center p-1 bg-gray-200 ">
+                    <h4 class="text-center font-babes text-md text-gray-800"> SUSTAINED POWER DELIVERY
+                    </h4>
+                </div>
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="Emission-hy">
+                    <p class="text-xs text-center">Consistent power delivery until full depletion
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="emission-li">
+                    <p class="text-xs text-center">Consistent power delivery until full depletion
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart2.svg" class="w-8 h-8" alt="emission-la">
+                    <p class="text-xs text-center">Diminishing power output as battery charge depletes
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
+                    <img src="/static/chart1.svg" class="w-8 h-8" alt="emission-ice">
+                    <p class="text-xs text-center">Consistent power until full depletion
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /sustained Details -->
+    </div>
+</body>
+
+</html>
