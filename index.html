@@ -19,6 +19,10 @@
             writing-mode: tb-rl;
             transform: rotate(-180deg);
         }
+        
+        .text-tiny {
+            font-size: 10px;
+        }
     </style>
 </head>
 
@@ -50,28 +54,28 @@
         <div class="col-span-4 gap-1 " x-show="tab === 'emission'" x-transition>
             <div class="grid grid-rows-5 h-full bg-black gap-0.5">
                 <div class="flex justify-center items-center p-1 bg-gray-200">
-                    <h4 class="text-center font-babes text-md text-gray-800">EMISSION
+                    <h4 class="text-center font-babes text-md text-gray-800 leading-4">EMISSION
                     </h4>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="Emission-hy">
-                    <p class="text-xs text-center">No harmful emissions; only water vapor and heat</p>
+                    <p class="text-tiny leading-3  text-center">No harmful emissions; only water vapor and heat</p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="emission-li">
-                    <p class="text-xs text-center">No harmful emissions</p>
+                    <p class="text-tiny leading-3  text-center">No harmful emissions</p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart2.svg" class="w-8 h-8" alt="emission-la">
-                    <p class="text-xs text-center">None while in operation, but does emit fumes that require ventilation during battery charging</p>
+                    <p class="text-tiny leading-3  text-center">None while in operation, but does emit fumes that require ventilation during battery charging</p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart3.svg" class="w-8 h-8" alt="emission-ice">
-                    <p class="text-xs text-center">Emissions while in operation. Well-suited for outdoor or highlyventilated environments
+                    <p class="text-tiny leading-3  text-center">Emissions while in operation. Well-suited for outdoor or highlyventilated environments
                     </p>
                 </div>
             </div>
@@ -85,28 +89,28 @@
         <div class="col-span-4 gap-1 bg-black" x-show="tab === 'space-req'" x-transition>
             <div class="grid grid-rows-5 h-full bg-black gap-0.5">
                 <div class="flex justify-center items-center p-1 bg-gray-200 ">
-                    <h4 class="text-center font-babes text-md text-gray-800"> SPACE REQUIREMENTS
+                    <h4 class="text-center font-babes text-md text-gray-800 leading-4"> SPACE REQUIREMENTS
                     </h4>
                 </div>
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="Emission-hy">
-                    <p class="text-xs text-center">Space-efficient infrastructure; storage can be located outside facility with dispensers located indoors or outdoors</p>
+                    <p class="text-tiny leading-3  text-center">Space-efficient infrastructure; storage can be located outside facility with dispensers located indoors or outdoors</p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart2.svg" class="w-8 h-8" alt="emission-li">
-                    <p class="text-xs text-center">No specialized changing or maintenance rooms required
+                    <p class="text-tiny leading-3 text-center">No specialized changing or maintenance rooms required
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart3.svg" class="w-8 h-8" alt="emission-la">
-                    <p class="text-xs text-center">Separate room, infrastructure often required for battery charging, changing and maintenance</p>
+                    <p class="text-tiny leading-3 text-center">Separate room, infrastructure often required for battery charging, changing and maintenance</p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="emission-ice">
-                    <p class="text-xs text-center">Primary fueling and storage infrastructure located outside facility
+                    <p class="text-tiny leading-3 text-center">Primary fueling and storage infrastructure located outside facility
                     </p>
                 </div>
             </div>
@@ -120,29 +124,29 @@
         <div class="col-span-4 gap-1 bg-black" x-show="tab === 'maint'" x-transition>
             <div class="grid grid-rows-5 h-full bg-black gap-0.5">
                 <div class="flex justify-center items-center p-1 bg-gray-200 ">
-                    <h4 class="text-center font-babes text-md text-gray-800"> MAINTENANCE
+                    <h4 class="text-center font-babes text-md text-gray-800 leading-4"> MAINTENANCE
                     </h4>
                 </div>
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart4.svg" class="w-8 h-8" alt="Emission-hy">
-                    <p class="text-xs text-center">Moderate maintenance requirements
+                    <p class="text-tiny leading-3  text-center">Moderate maintenance requirements
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="emission-li">
-                    <p class="text-xs text-center">No maintenance or equalization requirements
+                    <p class="text-tiny leading-3 text-center">No maintenance or equalization requirements
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart3.svg" class="w-8 h-8" alt="emission-la">
-                    <p class="text-xs text-center">Higher maintenance requirements compared to other electric options</p>
+                    <p class="text-tiny leading-3 text-center">Higher maintenance requirements compared to other electric options</p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart2.svg" class="w-8 h-8" alt="emission-ice">
-                    <p class="text-xs text-center">Requires regular, but not daily, maintenance
+                    <p class="text-tiny leading-3 text-center">Requires regular, but not daily, maintenance
                     </p>
                 </div>
             </div>
@@ -155,29 +159,29 @@
         <div class="col-span-4 gap-1 bg-black" x-show="tab === 'local'" x-transition>
             <div class="grid grid-rows-5 h-full bg-black gap-0.5">
                 <div class="flex justify-center items-center p-1 bg-gray-200 ">
-                    <h4 class="text-center font-babes text-md text-gray-800"> LOCAl UTILITY REQUIREMENT
+                    <h4 class="text-center font-babes text-md text-gray-800 leading-4"> LOCAl UTILITY REQUIREMENT
                     </h4>
                 </div>
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart2.svg" class="w-8 h-8" alt="Emission-hy">
-                    <p class="text-xs text-center">None, though refueling system may have requirements
+                    <p class="text-tiny leading-3 text-center">None, though refueling system may have requirements
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart2.svg" class="w-8 h-8" alt="emission-li">
-                    <p class="text-xs text-center">More intense electrical grid burden, depending on fleet size and charge intervals
+                    <p class="text-tiny leading-3 text-center">More intense electrical grid burden, depending on fleet size and charge intervals
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart2.svg" class="w-8 h-8" alt="emission-la">
-                    <p class="text-xs text-center">Moderate electrical requirements, depending on fleet size</p>
+                    <p class="text-tiny leading-3 text-center">Moderate electrical requirements, depending on fleet size</p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="emission-ice">
-                    <p class="text-xs text-center">None
+                    <p class="text-tiny leading-3 text-center">None
                     </p>
                 </div>
             </div>
@@ -192,29 +196,29 @@
         <div class="col-span-4 gap-1 bg-black" x-show="tab === 'required'" x-transition>
             <div class="grid grid-rows-5 h-full bg-black gap-0.5">
                 <div class="flex justify-center items-center p-1 bg-gray-200 ">
-                    <h4 class="text-center font-babes text-md text-gray-800"> REQUIRED OPERATOR ENVOLVEMENT
+                    <h4 class="text-center font-babes text-md text-gray-800 leading-4"> REQUIRED OPERATOR ENVOLVEMENT
                     </h4>
                 </div>
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="Emission-hy">
-                    <p class="text-xs text-center">Simple, fast refueling
+                    <p class="text-tiny leading-3 text-center">Simple, fast refueling
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart2.svg" class="w-8 h-8" alt="emission-li">
-                    <p class="text-xs text-center">Designed for opportunity charging; faster recharge capability than lead acid
+                    <p class="text-tiny leading-3 text-center">Designed for opportunity charging; faster recharge capability than lead acid
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart3.svg" class="w-8 h-8" alt="emission-la">
-                    <p class="text-xs text-center">Complex and time-consuming battery maintenance, charging or changing</p>
+                    <p class="text-tiny leading-3 text-center">Complex and time-consuming battery maintenance, charging or changing</p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="emission-ice">
-                    <p class="text-xs text-center">Simple, fast refueling with tank changes or pump
+                    <p class="text-tiny leading-3 text-center">Simple, fast refueling with tank changes or pump
                     </p>
                 </div>
             </div>
@@ -229,30 +233,30 @@
         <div class="col-span-4 gap-1 bg-black" x-show="tab === 'sustained'" x-transition>
             <div class="grid grid-rows-5 h-full bg-black gap-0.5">
                 <div class="flex justify-center items-center p-1 bg-gray-200 ">
-                    <h4 class="text-center font-babes text-md text-gray-800"> SUSTAINED POWER DELIVERY
+                    <h4 class="text-center font-babes text-md text-gray-800 leading-4"> SUSTAINED POWER DELIVERY
                     </h4>
                 </div>
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="Emission-hy">
-                    <p class="text-xs text-center">Consistent power delivery until full depletion
+                    <p class="text-tiny leading-3 text-center">Consistent power delivery until full depletion
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="emission-li">
-                    <p class="text-xs text-center">Consistent power delivery until full depletion
+                    <p class="text-tiny leading-3 text-center">Consistent power delivery until full depletion
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart2.svg" class="w-8 h-8" alt="emission-la">
-                    <p class="text-xs text-center">Diminishing power output as battery charge depletes
+                    <p class="text-tiny leading-3 text-center">Diminishing power output as battery charge depletes
                     </p>
                 </div>
 
                 <div class="flex flex-col items-center justify-center p-2 bg-gray-50 ">
                     <img src="chart1.svg" class="w-8 h-8" alt="emission-ice">
-                    <p class="text-xs text-center">Consistent power until full depletion
+                    <p class="text-tiny leading-3 text-center">Consistent power until full depletion
                     </p>
                 </div>
             </div>
