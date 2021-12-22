@@ -25,7 +25,7 @@
 <body class="p-8">
     <div class="grid grid-cols-12 gap-0.5" x-data="{ tab: 'sustained' }">
         <!-- Fuel Types -->
-        <div class=" col-span-3 grid grid-rows-5 font-babes gap-0.5 bg-black">
+        <div class=" col-span-3 grid grid-rows-5 font-babes gap-0.5 bg-black min-h-screen">
             <div class="bg-white">
             </div>
             <div class="bg-green-500 text-gray-50 p-2 flex justify-center items-center text-center tracking-wide">
@@ -47,9 +47,9 @@
             EMISSION
         </div>
 
-        <div class="col-span-4 gap-1 bg-black" x-show="tab === 'emission'" x-transition>
+        <div class="col-span-4 gap-1 " x-show="tab === 'emission'" x-transition>
             <div class="grid grid-rows-5 h-full bg-black gap-0.5">
-                <div class="flex justify-center items-center p-1 bg-gray-200 ">
+                <div class="flex justify-center items-center p-1 bg-gray-200">
                     <h4 class="text-center font-babes text-md text-gray-800">EMISSION
                     </h4>
                 </div>
